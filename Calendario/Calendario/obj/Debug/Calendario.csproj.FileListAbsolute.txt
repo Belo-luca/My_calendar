@@ -1,0 +1,13 @@
+C:\Users\Belometti.22036\source\repos\Calendario\Calendario\bin\Debug\Calendario.exe.config
+C:\Users\Belometti.22036\source\repos\Calendario\Calendario\bin\Debug\Calendario.exe
+C:\Users\Belometti.22036\source\repos\Calendario\Calendario\bin\Debug\Calendario.pdb
+C:\Users\Belometti.22036\source\repos\Calendario\Calendario\obj\Debug\Calendario.csproj.AssemblyReference.cache
+C:\Users\Belometti.22036\source\repos\Calendario\Calendario\obj\Debug\Calendario.Form1.resources
+C:\Users\Belometti.22036\source\repos\Calendario\Calendario\obj\Debug\Calendario.Properties.Resources.resources
+C:\Users\Belometti.22036\source\repos\Calendario\Calendario\obj\Debug\Calendario.csproj.GenerateResource.cache
+C:\Users\Belometti.22036\source\repos\Calendario\Calendario\obj\Debug\Calendario.csproj.CoreCompileInputs.cache
+C:\Users\Belometti.22036\source\repos\Calendario\Calendario\obj\Debug\Calendario.exe
+C:\Users\Belometti.22036\source\repos\Calendario\Calendario\obj\Debug\Calendario.pdb
+C:\Users\Belometti.22036\source\repos\Calendario\Calendario\obj\Debug\Calendario.New_commit.resources
+C:\Users\Belometti.22036\source\repos\Calendario\Calendario\obj\Debug\Calendario.Change_commit.resources
+C:\Users\Belometti.22036\source\repos\Calendario\Calendario\obj\Debug\Calendario.View_monthly.resources
