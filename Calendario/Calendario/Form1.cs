@@ -23,6 +23,10 @@ namespace Calendario
         public string titolo;
         public string descrizione;
         public DateTime data;
+        public int ora_inizio;
+        public int minuto_inizio;
+        public int ora_durata;
+        public int minuti_durata;
         public Color colore;
     }
     public partial class Form1 : Form
@@ -120,15 +124,19 @@ namespace Calendario
                 int indice = 0;
                 foreach (string riga in righe)
                 {
-                    string[] parti = riga.Split('>');
-                    if (parti.Length == 4)
+                    string[] parti = riga.Split('§');
+                    if (parti.Length == 8)
                     {
                         impegno nuovo_impegno = new impegno
                         {
                             titolo = parti[0],
                             descrizione = parti[1],
                             data = DateTime.Parse(parti[2]),
-                            colore = Color.FromArgb(int.Parse(parti[3]))
+                            ora_inizio = int.Parse(parti[3]),
+                            minuto_inizio = int.Parse(parti[4]),
+                            ora_durata = int.Parse(parti[5]),
+                            minuti_durata = int.Parse(parti[6]),
+                            colore = Color.FromArgb(int.Parse(parti[7]))
                         };
 
                         impegni[indice] = nuovo_impegno;

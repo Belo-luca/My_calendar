@@ -48,32 +48,25 @@ namespace Calendario
             }
             else
             {
-                if (textBox2.Text.Trim() == "")
+                if(ora_inizio.Value > 24 && minuto_inizio.Value > 60 && ora_durata.Value > 24 && minuti_durata.Value > 60)
                 {
-                    MessageBox.Show("Inserire una descrizione valida");
+                    MessageBox.Show("Inserire un orario valido");
                 }
                 else
                 {
-                    SaveFileDialog salva = new SaveFileDialog();
-                    salva.Filter = "File di testo (*.txt)|*.txt|Tutti i file (*.*)|*.*";
-                    salva.Title = "Salvare nuovo impegno";
-                    salva.FileName = "Calendario.txt";
-                    string titolo = textBox1.Text;
-                    string descrizione = textBox2.Text;
-                    string data = dateTimePicker1.Value.Day.ToString();
-                    string mese = dateTimePicker1.Value.Month.ToString();
-                    string anno = dateTimePicker1.Value.Year.ToString();
-                    data = data + "/" + mese + "/" + anno;
-                    string colore = label5.BackColor.ToArgb().ToString();
-                    if (salva.ShowDialog() == DialogResult.OK)
+                    if (textBox1.Text.Trim() == "" && textBox2.Text.Trim() == "")
                     {
-                        using (StreamWriter sw = new StreamWriter(salva.FileName))
-                        {
-                            sw.WriteLine(titolo + ">" + descrizione + ">" + data + ">" + colore);
-                        }
-                        this.Close();
-                        Form1 form1 = new Form1();
-                        form1.ShowDialog();
+                        MessageBox.Show("Inserire una descrizione valida");
+                    }
+                    else
+                    {
+                        string titolo = textBox1.Text;
+                        string descrizione = textBox2.Text;
+                        DateTime data = dateTimePicker1.Value;
+                        Color colore = label5.BackColor;
+                        string contenuto = $"{titolo}§{descrizione}§{data.ToString("yyyy-MM-dd")}§{ora_inizio.Value}§{minuto_inizio.Value}§{ora_durata.Value}§{minuti_durata.Value}§{colore.ToArgb()}";
+                        string percorso = Path.Combine(Application.StartupPath, "calendario.txt");
+                        File.WriteAllText(percorso, contenuto);
                     }
                 }
             }
@@ -105,6 +98,51 @@ namespace Calendario
             this.Close();
             Change_commit change_Commit = new Change_commit();
             change_Commit.ShowDialog();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ora_inizio_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void minuto_inizio_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ora_durata_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void minuti_durata_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
